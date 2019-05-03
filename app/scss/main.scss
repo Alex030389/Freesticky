@@ -52,7 +52,13 @@ img {
 }
 
 h1,
-h2,
+h2 {
+  font-weight: 400;
+  font-size: 36px;
+  color: $c-secondary;
+  letter-spacing: -.9px;
+}
+
 h3 {
   font-weight: normal;
 }
@@ -363,13 +369,6 @@ input::-moz-focus-inner {
   max-width: 750px;
   margin-right: 30px;
   margin-bottom: 30px;
-
-  h1 {
-    font-weight: normal;
-    font-size: 36px;
-    color: $c-secondary;
-    letter-spacing: -.9px;
-  }
 }
 
 .home-top__right {
@@ -589,8 +588,8 @@ input::-moz-focus-inner {
   cursor: pointer;
 
   svg {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-right: 10px;
 
     fill: white;
@@ -801,15 +800,9 @@ input::-moz-focus-inner {
 }
 
 .about-text-top {
-  h1 {
-    font-size: 36px;
-    color: $c-secondary;
-  }
-
+  
   h2 {
     margin-top: 25px;
-
-    font-size: 24px;
   }
 }
 
@@ -823,15 +816,15 @@ input::-moz-focus-inner {
 
 .about-like {
   position: relative;
-  left: -2px;
+  left: 0;
 
   margin-bottom: 44px;
 
   cursor: pointer;
 
   svg {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-right: 10px;
 
     fill: white;
@@ -1015,15 +1008,15 @@ input::-moz-focus-inner {
 
 .cartoons-item {
   padding: 0 15px 30px;
-  max-width: 547px;
-  width: 100%;
+  width: calc(100% / 2 - 30px);
+  min-width: 400px;
   
   h2 {
     font-size: 28px;
     font-weight: normal;
     color: $azure;
   }
-
+  
   ul {
     
     li {
@@ -1037,8 +1030,139 @@ input::-moz-focus-inner {
 }
 
 .cartoons-item_width-100 {
-  max-width: 1200px;
+  width: 100%;
 }
+
+// ====================================================== StickyCOLD
+.content-sticky-gold {
+
+  .link_blue {
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    text-decoration: underline;
+    font-size: 20px;
+    color: $c-secondary;
+  }
+
+  .form-box {
+    padding: 20px;
+    background-color: hsla(197, 17%, 84%, 0.5);
+    margin-bottom: 15px;
+  }
+
+  .form-title {
+    font-size: 20px;
+    color: $c-secondary;
+  }
+
+  .daily-h {
+    position: relative;
+
+    span {
+      position: absolute;
+      top: -10px;
+      font-size: 60px;
+    }
+  }
+}
+
+// ============================================= article-index
+.index-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.index-item {
+  width: calc(100% / 2 - 30px);
+  min-width: 400px;
+  margin: 15px 15px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.index-item_wide {
+  width: 100%;
+}
+
+.index-item__date {
+  color: $c-main;
+}
+
+.index-item__title,
+.index-item__link {
+  font-size: 24px;
+  color: $azure;
+  margin-bottom: 8px;
+}
+
+.index-tem__link:hover {
+  color: $azure
+}
+
+.index-item__text {
+  color: $c-secondary;
+}
+
+.index-item-wrap-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.index-item__list {
+  width: calc(100% / 6);
+  min-width: 155px;
+}
+
+.index-item__list-item {
+
+  a {
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.back-article-btn {
+  background-color: rgba(0, 153, 255, 0.8);
+  color: #fff;
+  padding: 8px 20px 3px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    color: #fff;
+    background-color: rgba(0, 153, 255, 1);
+
+    &:before {
+      border-color: transparent rgba(0, 153, 255, 1)
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 17px 10px 17px 0;
+    border-color: transparent rgba(0, 153, 255, 0.8) transparent transparent;
+  }
+}
+
+
 
 
 @import "media";
