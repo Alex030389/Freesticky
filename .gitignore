@@ -6,3 +6,4 @@
 /**/*.DS_Store
 /app/assets/template/css/
 /app/assets/template/js/
+/.vscode/

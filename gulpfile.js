@@ -47,7 +47,8 @@ gulp.task('styles', function() {
   .pipe(autoprefixer(['last 15 versions']))
   .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
   // .pipe(sourcemaps.write())
-  .pipe(gulp.dest('app/assets/template/css'))
+	.pipe(gulp.dest('app/assets/template/css'))
+	.pipe(gulp.dest('./'))
   .pipe(browserSync.stream())
 });
 
