@@ -29,7 +29,8 @@ body {
   letter-spacing: -.4px;
 }
 
-ul {
+ul,
+ol {
   margin: 0;
   padding: 0;
 
@@ -1050,7 +1051,7 @@ input::-moz-focus-inner {
 
   .form-box {
     padding: 20px;
-    background-color: hsla(197, 17%, 84%, 0.5);
+    background-color: rgba(207, 217, 221, 0.5);
     margin-bottom: 15px;
   }
 
@@ -1129,36 +1130,117 @@ input::-moz-focus-inner {
 }
 
 .back-article-btn {
-  background-color: rgba(0, 153, 255, 0.8);
-  color: #fff;
-  padding: 8px 20px 3px;
+  padding: 0 5px 1px 25px;
   margin-left: 10px;
   margin-bottom: 20px;
   position: relative;
   display: inline-block;
-
+  color: $azure;
+  
   &:hover {
-    color: #fff;
-    background-color: rgba(0, 153, 255, 1);
-
-    &:before {
-      border-color: transparent rgba(0, 153, 255, 1)
-    }
+    color: $azure;
+    box-shadow: 0px 1px 0px 0px $azure;
   }
 
   &:before {
     content: "";
+    width: 9px;
+    height: 9px;
+    border-top: 1px solid $azure;
+    border-left: 1px solid $azure;
     position: absolute;
-    top: 0;
-    right: 100%;
-    width: 0;
+    top: 4px;
+    left: 0;
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    content: "";
+    width: 20px;
     height: 0;
-    border-style: solid;
-    border-width: 17px 10px 17px 0;
-    border-color: transparent rgba(0, 153, 255, 0.8) transparent transparent;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    border-top: 1px solid $azure;
+  }
+
+}
+
+// hunt
+.content-hunt {
+
+  h2 {
+    font-size: 22px;    
   }
 }
 
+.hunt-title {
+  margin-bottom: -5px;
+}
+
+.hunt-subtitle {
+  font-size: 22px;
+  position: relative;
+  margin-bottom: 20px;
+  color: $c-secondary;
+  display: block;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 150px;
+    height: 1px;
+    background-color: $c-main;
+  }
+}
+
+.hunt-date {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: $c-secondary;
+}
+
+.list-style {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.hunt-code {
+  background-color: rgba(207, 217, 221, 0.5);
+  padding: 15px;
+  margin-bottom: 30px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.hunt-about-autor {
+  padding-left: 20px;
+  
+  p {
+    margin-bottom: 5px;
+  }
+  
+  p:first-child {
+    font-size: 18px;
+    color: $c-secondary;
+    position: relative;
+    margin-bottom: 20px;
+    
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      width: 150px;
+      height: 1px;
+      background-color: $c-secondary;
+    }
+  }
+}
 
 
 
