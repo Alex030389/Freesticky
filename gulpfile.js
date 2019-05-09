@@ -68,6 +68,7 @@ gulp.task('scripts', function() {
   .pipe(uglify()) // Mifify js (opt.)
   // .pipe(sourcemaps.write())
   .pipe(gulp.dest('app/assets/template/js'))
+  .pipe(gulp.dest('./'))
   .pipe(browserSync.reload({ stream: true }))
 });
 

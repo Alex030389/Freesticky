@@ -2,7 +2,6 @@ svg4everybody();
 
 $('#main-select').selectric();
 
-
 $('.hamburger').click(function () {
   if ($(window).width() < 992) {
     $('.overlay').removeClass('overlay_hidden');
@@ -43,51 +42,7 @@ $(window).resize(function() {
     $('body').css('overflow-y', 'visible');
     $('.overlay').removeAttr('style');
   }
-})
-
-
-// preloader
-// setInterval(function () {
-//     var p = $(".preloader");
-//     p.css("opacity", 0);
-//     setInterval(function () {
-//         p.remove();
-//     }, 1000);
-// }, 2000);
-
-// scroll
-// $("#menu").on("click", "a", function (event) {
-//     event.preventDefault();
-//     var id = $(this).attr('href'),
-//         top = $(id).offset().top;
-//     $('body,html').animate({
-//         scrollTop: top
-//     }, 600);
-// });
-
-// hamgurger;
-// var hamburger = $(".hamburger");
-// hamburger.click(function () {
-//     hamburger.toggleClass("is-active");
-//     $(".menu").fadeToggle(200);
-
-// disable scrolling when the menu is active
-// if (hamburger.hasClass("is-active")) {
-
-//     var winScrollTop = $(window).scrollTop();
-//     $(window).bind("scroll", function () {
-//         $(window).scrollTop(winScrollTop);
-//     });
-// } else {
-//     $(window).off("scroll");
-// }
-// });
-
-// $(".menu__link").click(function () {
-//     $(window).off("scroll");
-//     hamburger.toggleClass("is-active");
-//     $(".menu").fadeToggle(200);
-// });
+});
 
 
 // flipClock
