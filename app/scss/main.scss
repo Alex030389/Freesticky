@@ -659,7 +659,7 @@ input::-moz-focus-inner {
 }
 
 // ====================================================== more
-.load-more {
+.btn-more {
   display: flex;
   justify-content: space-between;
   width: 120px;
@@ -668,6 +668,8 @@ input::-moz-focus-inner {
   font-size: 20px;
   color: $c-secondary;
   letter-spacing: -.6px;
+  background-color: transparent;
+  border: none;
 
   cursor: pointer;
   opacity: .5;
@@ -1214,6 +1216,10 @@ input::-moz-focus-inner {
   margin-bottom: 20px;
 }
 
+.margin-b {
+  margin-bottom: 20px;
+}
+
 .hunt-code {
   background-color: rgba(207, 217, 221, 0.5);
   padding: 15px;
@@ -1256,7 +1262,7 @@ input::-moz-focus-inner {
 
 .code-bg-color {
   background-color: rgba(207, 217, 221, 0.5);
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 
