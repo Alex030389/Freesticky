@@ -188,7 +188,7 @@
 
   // ======================================================  wrap
   .wrap {
-    padding-top: $header-small;
+    padding-top: $header-small + 15px;
   }
 
   // ====================================================== content
@@ -210,6 +210,10 @@
 
 
   // ====================================================== article-list
+.article-list {
+  margin-bottom: 0px;
+}
+
   .article-item {
     min-width: 200px;
   }
@@ -286,7 +290,7 @@
 
   // ====================================================== about
   .about-img {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .about-text-top {

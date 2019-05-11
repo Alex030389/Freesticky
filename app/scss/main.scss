@@ -246,14 +246,14 @@ input::-moz-focus-inner {
   align-items: flex-start;
 
   &_small-padding {
-    padding-top: $header-small;
+    padding-top: $header-small + 15px;
   }
 }
 
 // ====================================================== menu
 .overlay {
   min-width: 390px;
-  height: 1500px;
+  // height: 1;
   margin-right: 30px;
 
   &_hidden {
@@ -1040,7 +1040,6 @@ input::-moz-focus-inner {
 .content-sticky-gold {
 
   .link_blue {
-    margin-bottom: 15px;
     display: inline-block;
   }
 
@@ -1049,7 +1048,6 @@ input::-moz-focus-inner {
   }
 
   h3 {
-    text-decoration: underline;
     font-size: 20px;
     color: $c-secondary;
   }
@@ -1128,7 +1126,6 @@ input::-moz-focus-inner {
   width: calc(100% / 5 - 15px);
   min-width: 200px;
   margin-right: 15px;
-  // padding-right: 15px;
 
   a {
 
@@ -1220,6 +1217,10 @@ input::-moz-focus-inner {
   margin-bottom: 20px;
 }
 
+.margin-b-15 {
+  margin-bottom: 15px;
+}
+
 .hunt-code {
   background-color: rgba(207, 217, 221, 0.5);
   padding: 15px;
@@ -1265,6 +1266,16 @@ input::-moz-focus-inner {
   overflow-x: auto;
 }
 
+.content-suggest {
+
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+    color: $c-secondary;
+  }
+}
 
 
 @import "media";
