@@ -44,6 +44,10 @@ $(window).resize(function() {
   }
 });
 
+$('.btn-article-back').click(function() {
+  window.history.back();
+});
+
 
 // flipClock
 
