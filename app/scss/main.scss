@@ -1277,5 +1277,60 @@ input::-moz-focus-inner {
   }
 }
 
+// ======================================================== contact-form
+.form__box-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -15px;
+}
+
+.form__inputs {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  min-width: 300px;
+  margin: 0 15px;
+}
+
+textarea {
+  flex-grow: 1;
+  margin: 0 15px;
+  padding: 5px 20px;
+
+  color: grey;
+
+  background-color: #edf4f5;
+  border: none;
+  border-radius: 5px;
+}
+
+.form__inputs input {
+  margin-bottom: 20px;
+  padding: 8px 20px 4px;
+
+  color: grey;
+
+  background-color: #edf4f5;
+  border: none;
+  border-radius: 5px;
+}
+
+.form__btn {
+  display: block;
+
+  padding: 10px 30px;
+
+  color: #ffffff;
+
+  background-color: $cherry-red;
+  border: none;
+
+  &:hover {
+    background-color: $c-secondary;
+  }
+}
+
+
 
 @import "media";
