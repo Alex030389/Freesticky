@@ -49,6 +49,16 @@ $('.btn-article-back').click(function() {
 });
 
 
+// $('.likedislike .up').click(function() {
+//     setTimeout(function() {
+//       if($('.likedislike').hasClass('user_voted')) {
+//         $('.article-item__like').addClass('article-item__like_active');
+//       };
+//     }, 1000);    
+// })
+
+
+
 // flipClock
 
 var taimer = $(".get-free-taimer__inner").FlipClock({
