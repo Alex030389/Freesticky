@@ -54,10 +54,9 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
   return gulp.src([
-    'app/libs/jquery/jquery.min.js',
+    //'app/libs/jquery/jquery.min.js',
     'app/libs/svg4everybody/svg4everybody.min.js',
     'app/libs/selectric/jquery.selectric.min.js',
-    'app/libs/flipclock/flipclock.js',
     'app/_js/common.js'
     ])
   // .pipe(sourcemaps.init())
@@ -65,10 +64,9 @@ gulp.task('scripts', function() {
   // .pipe(babel({
   //   presets: ['@babel/env']
   // }))
-  .pipe(uglify()) // Mifify js (opt.)
+  .pipe(uglify())
   // .pipe(sourcemaps.write())
   .pipe(gulp.dest('app/assets/template/js'))
-  .pipe(gulp.dest('./'))
   .pipe(browserSync.reload({ stream: true }))
 });
 

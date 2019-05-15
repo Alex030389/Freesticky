@@ -49,40 +49,49 @@ $('.btn-article-back').click(function() {
 });
 
 
-// $('.likedislike .up').click(function() {
-//     setTimeout(function() {
-//       if($('.likedislike').hasClass('user_voted')) {
-//         $('.article-item__like').addClass('article-item__like_active');
-//       };
-//     }, 1000);    
-// })
+
+//like
+$(window).load(function() {
+  $('.article-item__like').has(".user_voted").addClass('article-item__like_active');
+    // like();
+});
+
+$('.likedislike .up').click(function() {
+  like(); 
+});
+
+function like() {
+  setTimeout(function() {
+    $('.article-item__like').has(".user_voted").addClass('article-item__like_active');
+  }, 800);
+};
 
 
 
 // flipClock
 
-var taimer = $(".get-free-taimer__inner").FlipClock({
-  //clockFace: "DailyCounter", // показывать дни
-  autoStart: false, // не начинать отсчет заново
-  // callbacks: { // запустить функции по истечению времени
-  //   stop: function() {
-  //     $(".message").html("Время прошло");
-  //   }
-  // } 
-});
+// var taimer = $(".get-free-taimer__inner").FlipClock({
+//   //clockFace: "DailyCounter", // показывать дни
+//   autoStart: false, // не начинать отсчет заново
+//   // callbacks: { // запустить функции по истечению времени
+//   //   stop: function() {
+//   //     $(".message").html("Время прошло");
+//   //   }
+//   // } 
+// });
 
-// чтобы время не сбрасывалось нужно привязать ко времени и к конечному времени
-var dt = "April 27 2019 12:50:48"
-var first = new Date(dt);
-var last = Date.now();
-var remaining = first - last;
-remaining /= 1000; //переводит милисекунды в секунды
+// // чтобы время не сбрасывалось нужно привязать ко времени и к конечному времени
+// var dt = "April 27 2019 12:50:48"
+// var first = new Date(dt);
+// var last = Date.now();
+// var remaining = first - last;
+// remaining /= 1000; //переводит милисекунды в секунды
 
-// время таймера 
-// taimer.setTime(remaining);
-taimer.setTime(5000);
+// // время таймера 
+// // taimer.setTime(remaining);
+// taimer.setTime(5000);
 
-// отсчет вперед или назад (true, false)
-taimer.setCountdown(true);
+// // отсчет вперед или назад (true, false)
+// taimer.setCountdown(true);
 
-taimer.start();
+// taimer.start();
