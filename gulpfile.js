@@ -11,8 +11,6 @@ var gulp          = require('gulp'),
 		notify        = require('gulp-notify'),
 		del           = require('del'),
 		sourcemaps    = require('gulp-sourcemaps'),
-		// rsync         = require('gulp-rsync'),
-    // babel         = require("gulp-babel");
     svgSprite     = require('gulp-svg-sprite'),
     svgmin = require('gulp-svgmin'),
     cheerio = require('gulp-cheerio'),
@@ -48,13 +46,11 @@ gulp.task('styles', function() {
   .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
   // .pipe(sourcemaps.write())
 	.pipe(gulp.dest('app/assets/template/css'))
-	.pipe(gulp.dest('./'))
   .pipe(browserSync.stream())
 });
 
 gulp.task('scripts', function() {
   return gulp.src([
-    //'app/libs/jquery/jquery.min.js',
     'app/libs/svg4everybody/svg4everybody.min.js',
     'app/libs/selectric/jquery.selectric.min.js',
     'app/_js/common.js'
@@ -70,47 +66,19 @@ gulp.task('scripts', function() {
   .pipe(browserSync.reload({ stream: true }))
 });
 
-// gulp.task('img', function() {
-//   return gulp.src('app/img/**/*')
-//   .pipe(gulp.dest('app/img'))
-//   .pipe(browserSync.stream())
-// });
-
-
 gulp.task('watch', function() {
   gulp.watch('app/*.html', gulp.parallel('html'));
   gulp.watch('app/'+syntax+'/**/*.'+syntax+'', gulp.parallel('styles'));
   gulp.watch('app/_js/**/*', gulp.parallel('scripts'));
-  // gulp.watch(['libs/**/*.js', 'app/js/**/*'], gulp.parallel('scripts'));
-  // gulp.watch('app/img/**/*', gulp.parallel('img'));
 });
 
 gulp.task('default', gulp.parallel(
   'clean',
   'styles',
   'scripts',
-  // 'img',
   'browser-sync',
-  // 'deploy',
   'watch'
 ));
-
-
-
-// gulp.task('rsync', function() {
-// 	return gulp.src('app/_js/common.js')
-// 	.pipe(rsync({
-// 		root: 'app/_js/',
-// 		hostname: 'user@sait.com',
-// 		destination: 'user/public_html/',
-// 		// include: ['*.htaccess'], // Includes files to deploy
-// 		//exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
-// 		recursive: true,
-// 		archive: true,
-// 		silent: false,
-// 		compress: true
-// 	}))
-// });
 
 gulp.task('svg', function () {
 	return gulp.src('app/_img/icons/svg/*.svg')
