@@ -26,6 +26,10 @@ $('.hamburger').click(function () {
   };
 });
 
+$('.search-btn').click(function() {
+  $('.box-mobile-search-form').fadeToggle(1);
+});
+
 
 $(document).scroll(function () {
   if ($(document).scrollTop() >= 200) {

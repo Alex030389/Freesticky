@@ -1,20 +1,20 @@
-var syntax        = 'scss'; // Syntax: sass or scss;
+var syntax      = 'scss'; // Syntax: sass or scss;
 
-var gulp          = require('gulp'),
-		sass          = require('gulp-sass'),
-		browserSync   = require('browser-sync'),
-		concat        = require('gulp-concat'),
-		uglify        = require('gulp-uglify'),
-		cleancss      = require('gulp-clean-css'),
-		rename        = require('gulp-rename'),
-		autoprefixer  = require('gulp-autoprefixer'),
-		notify        = require('gulp-notify'),
-		del           = require('del'),
-		sourcemaps    = require('gulp-sourcemaps'),
-    svgSprite     = require('gulp-svg-sprite'),
-    svgmin = require('gulp-svgmin'),
-    cheerio = require('gulp-cheerio'),
-    replace = require('gulp-replace');
+var gulp        = require('gulp'),
+  sass          = require('gulp-sass'),
+  browserSync   = require('browser-sync'),
+  concat        = require('gulp-concat'),
+  uglify        = require('gulp-uglify'),
+  cleancss      = require('gulp-clean-css'),
+  rename        = require('gulp-rename'),
+  autoprefixer  = require('gulp-autoprefixer'),
+  notify        = require('gulp-notify'),
+  del           = require('del'),
+  sourcemaps    = require('gulp-sourcemaps'),
+  svgSprite     = require('gulp-svg-sprite'),
+  svgmin        = require('gulp-svgmin'),
+  cheerio       = require('gulp-cheerio'),
+  replace       = require('gulp-replace');
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -45,7 +45,8 @@ gulp.task('styles', function() {
   .pipe(autoprefixer(['last 15 versions']))
   .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
   // .pipe(sourcemaps.write())
-	.pipe(gulp.dest('app/assets/template/css'))
+  .pipe(gulp.dest('app/assets/template/css'))
+  .pipe(gulp.dest('./'))
   .pipe(browserSync.stream())
 });
 
@@ -81,62 +82,62 @@ gulp.task('default', gulp.parallel(
 ));
 
 gulp.task('svg', function () {
-	return gulp.src('app/_img/icons/svg/*.svg')
-	// minify svg
-		.pipe(svgmin({
-			js2svg: {
-				pretty: true
-			}
-		}))
-		// remove all fill, style and stroke declarations in out shapes
-		.pipe(cheerio({
-			run: function ($) {
-				$('[fill]').removeAttr('fill');
-				$('[stroke]').removeAttr('stroke');
-				$('[style]').removeAttr('style');
-			},
-			parserOptions: {xmlMode: true}
-		}))
-		// cheerio plugin create unnecessary string '&gt;', so replace it.
-		.pipe(replace('&gt;', '>'))
-		// build svg sprite
-		.pipe(svgSprite({
-			mode: {
-				symbol: {
-					sprite: "sprite.svg",
-				}
-			}
-		}))
-		.pipe(gulp.dest('app/assets/template/img/icons/svg/'));
+  return gulp.src('app/_img/icons/svg/*.svg')
+  // minify svg
+    .pipe(svgmin({
+      js2svg: {
+        pretty: true
+      }
+    }))
+    // remove all fill, style and stroke declarations in out shapes
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: {xmlMode: true}
+    }))
+    // cheerio plugin create unnecessary string '&gt;', so replace it.
+    .pipe(replace('&gt;', '>'))
+    // build svg sprite
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          sprite: "sprite.svg",
+        }
+      }
+    }))
+    .pipe(gulp.dest('app/assets/template/img/icons/svg/'));
 });
 
 // for color icon
 gulp.task('svg-color', function () {
-	return gulp.src('app/_img/icons/svg/color/*.svg')
-	// minify svg
-		.pipe(svgmin({
-			js2svg: {
-				pretty: true
-			}
-		}))
-		// remove all fill, style and stroke declarations in out shapes
-		.pipe(cheerio({
-			run: function ($) {
-				// $('[fill]').removeAttr('fill');
-				// $('[stroke]').removeAttr('stroke');
-				// $('[style]').removeAttr('style');
-			},
-			parserOptions: {xmlMode: true}
-		}))
-		// cheerio plugin create unnecessary string '&gt;', so replace it.
-		.pipe(replace('&gt;', '>'))
-		// build svg sprite
-		.pipe(svgSprite({
-			mode: {
-				symbol: {
-					sprite: "sprite-c.svg",
-				}
-			}
-		}))
-		.pipe(gulp.dest('app/assets/template/img/icons/svg/color/'));
+  return gulp.src('app/_img/icons/svg/color/*.svg')
+  // minify svg
+    .pipe(svgmin({
+      js2svg: {
+        pretty: true
+      }
+    }))
+    // remove all fill, style and stroke declarations in out shapes
+    .pipe(cheerio({
+      run: function ($) {
+        // $('[fill]').removeAttr('fill');
+        // $('[stroke]').removeAttr('stroke');
+        // $('[style]').removeAttr('style');
+      },
+      parserOptions: {xmlMode: true}
+    }))
+    // cheerio plugin create unnecessary string '&gt;', so replace it.
+    .pipe(replace('&gt;', '>'))
+    // build svg sprite
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          sprite: "sprite-c.svg",
+        }
+      }
+    }))
+    .pipe(gulp.dest('app/assets/template/img/icons/svg/color/'));
 });

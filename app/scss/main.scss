@@ -242,6 +242,33 @@ input::-moz-focus-inner {
   }
 }
 
+// mobile
+.box-mobile-search-form {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  padding: 0 20px 20px;
+  background-color: #f4f4f5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .1);
+
+  .btn {
+    width: 100px;
+  }
+
+  .search-form {
+    min-width: 100%;
+    width: 100%;
+    display: block;
+  }
+
+  .input {
+    padding: 10px 100px 10px 10px;
+  }
+}
+
 // ======================================================  wrap
 .wrap {
   position: relative;
@@ -455,31 +482,46 @@ input::-moz-focus-inner {
 .socials-block {
   align-self: flex-end;
 
-  span {
+  span:first-child {
     margin-right: 10px;
 
     color: #a9bcc3;
   }
 
-  a {
-    display: inline-block;
-    margin-left: 8px;
+  // a {
+  //   display: inline-block;
+  //   margin-left: 8px;
 
-    &:hover svg {
-      opacity: .80;
+  //   &:hover svg {
+  //     opacity: .80;
 
-      fill: $azure;
-    }
-  }
+  //     fill: $azure;
+  //   }
+  // }
 
-  svg {
-    width: 25px;
-    height: 25px;
+  // svg {
+  //   width: 25px;
+  //   height: 25px;
 
-    transition: .2s;
+  //   transition: .2s;
 
-    fill: $c-main;
-  }
+  //   fill: $c-main;
+  // }
+}
+
+.ya-share2 {
+  display: none;
+  display: inline-block;
+  position: relative;
+  top: -5px;
+}
+
+.ya-share2__badge {
+  width: 25px;
+}
+
+.socials-block span {
+  margin-right: 0;
 }
 
 // ====================================================== article-list
