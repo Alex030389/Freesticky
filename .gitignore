@@ -1,4 +1,5 @@
 /node_modules/
+/debug.log
 /.git/
 /**/_backstage
 /**/package-lock.json

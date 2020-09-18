@@ -65,7 +65,7 @@ h3 {
 
 button {
   background-color: transparent;
-  border: none;
+  border: none !important;
 }
 
 button:active,
@@ -701,7 +701,7 @@ input::-moz-focus-inner {
 .btn-more {
   display: flex;
   justify-content: space-between;
-  width: 120px;
+  width: 130px;
   margin: 30px auto 50px;
 
   font-size: 20px;
@@ -726,7 +726,6 @@ input::-moz-focus-inner {
 }
 
 // ====================================================== logos
-// переделать это блок
 .logos {
   margin-right: -200px;
   margin-left: -200px;
@@ -739,21 +738,26 @@ input::-moz-focus-inner {
   position: relative;
 
   overflow: hidden;
+  height: 90px;
 }
 
 .logos__list-items {
-  height: 90px;
+  height: 100%;
+  width: calc(1690px * 3);
+  position: absolute;
+  top: 0;
+  left: 0;
 
-  background: url("../img/logos/spritesheet2.png") repeat-x;
+  background: url("../img/logos/spritesheet.png") top left repeat-x;
   background-size: auto 100%;
 
-  animation: panoramic 30s infinite linear;
+  animation: panoramic 45s infinite linear alternate;
   animation-play-state: running;
 }
 
 @keyframes panoramic {
   to {
-    background-position: 100% 0;
+    left: -100%;
   }
 }
 

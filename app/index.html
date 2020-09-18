@@ -14,8 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- <meta property="og:image" content="path/to/image.jpg"> -->
-  <link rel="icon" href="img/favicon/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+  <!-- <link rel="icon" href="img/favicon/favicon.ico"> -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png"> -->
 
   <meta name="theme-color" content="#000">
 
@@ -23,8 +23,6 @@
 </head>
 
 <body>
-  <!-- end chank head -->
-
 
 
   <!-- =============================================== header -->
@@ -37,7 +35,7 @@
     </div>
     <form class="search-form form" action="#" method="POST">
       <input class="input" type="text" name="text" placeholder="Enter request">
-      <input class="btn trans" type="submit" value="Search">
+      <button class="btn trans">Search</button>
     </form>
     <ul class="header-menu">
       <li><a href="./index.html">Home</a></li>
@@ -48,16 +46,18 @@
         <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#search"></use>
       </svg>
     </div>
+    <div class="box-mobile-search-form">
+        <form class="search-form form" action="search.html" id="search-form" method="get">
+        <input class="input" type="text" name="search" placeholder="Enter request">
+        <button class="btn trans">Search</button>
+      </form>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js"></script>
-    <script>
-      svg4everybody()
-    </script>
+
   </header>
+
   <div class="wrap">
     <!-- end chunk header -->
-
-
 
     <!-- ============================================= menu -->
     <div class="overlay"></div>
@@ -281,9 +281,6 @@
     <div class="inner">
     
     <!-- end chank menu -->
-    
-      
-
 
       <!-- =============================================== home-top -->
       <div class="home-top">
@@ -311,7 +308,7 @@
 
           <div class="socials-block">
             <span>Share:</span>
-            <a href="#">
+            <!-- <a href="#">
               <svg>
                 <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#facebook"></use>
               </svg>
@@ -335,7 +332,7 @@
               <svg>
                 <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#pinterest-logo"></use>
               </svg>
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -347,7 +344,7 @@
 
         <div class="article-item trans">
           <div class="article-item__img">
-            <img src="./assets/template/img/articles/sunset.jpg" alt="">
+            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
           </div>
           <h2 class="article-item__h2"><a class="link_blue" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor
@@ -375,7 +372,7 @@
         </div>
         <div class="article-item trans">
           <div class="article-item__img">
-            <img src="./assets/template/img/articles/sunset.jpg" alt="">
+            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
           </div>
           <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor
@@ -404,7 +401,7 @@
         </div>
         <div class="article-item trans">
           <div class="article-item__img">
-            <img src="./assets/template/img/articles/sunset.jpg" alt="">
+            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
           </div>
           <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor
@@ -432,7 +429,7 @@
         </div>
         <div class="article-item trans">
           <div class="article-item__img">
-            <img src="./assets/template/img/articles/sunset.jpg" alt="">
+            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
           </div>
           <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor
@@ -469,7 +466,7 @@
         <h2 class="mail__h2">The articles sent straight to your inbox every month.</h2>
         <form class="mail__form form" action="#" method="POST">
           <input class="input" type="text" name="text" placeholder="Your email address">
-          <input class="btn trans" type="submit" value="Subscribe">
+          <button class="btn trans">Subscribe</button>
         </form>
       </div>
       <!-- chunk end mail -->
@@ -481,7 +478,7 @@
 
         <div class="article-item trans">
           <div class="article-item__img">
-            <img src="./assets/template/img/articles/sunset.jpg" alt="">
+            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
           </div>
           <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor
@@ -509,7 +506,7 @@
         </div>
         <div class="article-item trans">
           <div class="article-item__img">
-            <img src="./assets/template/img/articles/sunset.jpg" alt="">
+            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
           </div>
           <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor
@@ -538,7 +535,7 @@
         </div>
         <div class="article-item trans">
           <div class="article-item__img">
-            <img src="./assets/template/img/articles/sunset.jpg" alt="">
+            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
           </div>
           <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor
@@ -567,7 +564,7 @@
         </div>
         <div class="article-item trans">
           <div class="article-item__img">
-            <img src="./assets/template/img/articles/sunset.jpg" alt="">
+            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
           </div>
           <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor
@@ -599,13 +596,12 @@
 
 
       <!-- =============================================== load-more -->
-      <div class="load-more">
+      <button class="btn-more">
         <svg>
           <use xlink:href="./assets/template/img/icons/svg/color/symbol/sprite-c.svg#reload"></use>
         </svg>
         <span>Load More</span>
-      </div>
-      <!-- chunk end load-more -->
+      </button>
 
 
 
@@ -616,8 +612,7 @@
             <div class="logos__list-items"></div>
           </div>
         </div>
-      </section>
-      <!-- chunk end logos -->
+      </section><!--/logos-->
 
 
 
