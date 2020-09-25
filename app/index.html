@@ -13,12 +13,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- <meta property="og:image" content="path/to/image.jpg"> -->
-  <!-- <link rel="icon" href="img/favicon/favicon.ico"> -->
-  <!-- <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png"> -->
-
-  <meta name="theme-color" content="#000">
-
   <link rel="stylesheet" href="./assets/template/css/main.min.css">
 </head>
 
@@ -52,8 +46,6 @@
         <button class="btn trans">Search</button>
       </form>
     </div>
-
-
   </header>
 
   <div class="wrap">
@@ -86,6 +78,11 @@
                 <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#note"></use>
               </svg>
               <span>About FreeSticky</span></a></li>
+          <li><a href="#">
+              <svg>
+                <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#certifications"></use>
+              </svg>
+              <span>Certifications</span></a></li>
         </ul>
       </li>
 
@@ -294,61 +291,36 @@
         </div>
         <div class="home-top__right">
           <div class="select-wrap trans">
-            <select id="main-select" name="filter-article" id="">
+            <select id="main-select" name="filter-article" onchange="window.location.href=this.options[this.selectedIndex].value">
               <option disabled selected>Expore by Category</option>
-              <option>Advanced SEO</option>
-              <option>Analytics</option>
-              <option>Blogging</option>
-              <option>Business Practices</option>
-              <option>Community Management</option>
-              <option>Content</option>
-              <option>Conversion Rate Optimization</option>
+              <option value="page.html">Advanced SEO</option>
+              <option value="page-2.html">Analytics</option>
+              <option value="page-3.html">Blogging</option>
+              <option value="page-4.html">Business Practices</option>
+              <option value="page-5.html">Community Management</option>
+              <option value="page-6.html">Content</option>
+              <option value="page-7.html">Conversion Rate Optimization</option>
             </select>
           </div>
 
-          <div class="socials-block">
-            <span>Share:</span>
-            <!-- <a href="#">
-              <svg>
-                <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#facebook"></use>
-              </svg>
-            </a>
-            <a href="#">
-              <svg>
-                <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#google-plus"></use>
-              </svg>
-            </a>
-            <a href="#">
-              <svg class="c">
-                <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#github"></use>
-              </svg>
-            </a>
-            <a href="#">
-              <svg>
-                <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#linkedin"></use>
-              </svg>
-            </a>
-            <a href="#">
-              <svg>
-                <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#pinterest-logo"></use>
-              </svg>
-            </a> -->
+          <div class="home-top__share share">
+            <span class="share__label">Share:</span>
+            <div class="ya-share2" data-services="vkontakte,facebook,twitter,linkedin,skype"></div>           
           </div>
         </div>
       </div>
-
 
 
       <!-- =============================================== article-list-1 -->
       <div class="article-list">
 
         <div class="article-item trans">
-          <div class="article-item__img">
-            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
-          </div>
-          <h2 class="article-item__h2"><a class="link_blue" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor
-              incididunt</a></h2>
+          <div class="article-item__box-img-link">
+            <div class="article-item__img">
+              <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
+            </div>
+            <h2 class="article-item__h2"><a class="article-item__link link_blue" href="#">Lorem ipsum dolor sit amett</a></h2>
+          </div>          
           <ul class="article-item__tag-list">
             <li>Analytics</li>
             <li>Design</li>
@@ -363,7 +335,7 @@
             <div class="article-item__btn-wrap">
               <a class="article-item__btn-more" href="./article.html">READ MORE</a>
             </div>
-            <div class="article-item__like article-item__like_active">
+            <div class="article-item__like like like_active">
               <svg>
                 <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#heart"></use>
               </svg>
@@ -371,41 +343,12 @@
           </div>
         </div>
         <div class="article-item trans">
-          <div class="article-item__img">
-            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
-          </div>
-          <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor
-              incididunt</a></h2>
-          <ul class="article-item__tag-list">
-            <li>Analytics</li>
-            <li>Design</li>
-            <li>SEO</li>
-            <li>Social Media</li>
-          </ul>
-          <p class="artile-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut ea commodo …</p>
-          <div class="article-item__bootom">
-            <div class="article-item__btn-wrap">
-              <a class="article-item__btn-more" href="./article.html">READ MORE</a>
-              <a class="article-item__btn-free" href="./article.html">GET YOUR FREE</a>
+          <div class="article-item__box-img-link">
+            <div class="article-item__img">
+              <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
             </div>
-            <div class="article-item__like">
-              <svg>
-                <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#heart"></use>
-              </svg>
-              <span>314</span></div>
-          </div>
-        </div>
-        <div class="article-item trans">
-          <div class="article-item__img">
-            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
-          </div>
-          <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor
-              incididunt</a></h2>
+            <h2 class="article-item__h2"><a class="article-item__link link_blue" href="#">Lorem ipsum dolor sit amett</a></h2>
+          </div>          
           <ul class="article-item__tag-list">
             <li>Analytics</li>
             <li>Design</li>
@@ -420,43 +363,13 @@
             <div class="article-item__btn-wrap">
               <a class="article-item__btn-more" href="./article.html">READ MORE</a>
             </div>
-            <div class="article-item__like article-item__like_active">
+            <div class="article-item__like like like_active">
               <svg>
                 <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#heart"></use>
               </svg>
               <span>314</span></div>
           </div>
         </div>
-        <div class="article-item trans">
-          <div class="article-item__img">
-            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
-          </div>
-          <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor
-              incididunt</a></h2>
-          <ul class="article-item__tag-list">
-            <li>Analytics</li>
-            <li>Design</li>
-            <li>SEO</li>
-            <li>Social Media</li>
-          </ul>
-          <p class="artile-item__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut ea commodo …</p>
-          <div class="article-item__bootom">
-            <div class="article-item__btn-wrap">
-              <a class="article-item__btn-more" href="./article.html">READ MORE</a>
-              <a class="article-item__btn-free" href="./article.html">GET YOUR FREE</a>
-            </div>
-            <div class="article-item__like">
-              <svg>
-                <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#heart"></use>
-              </svg>
-              <span>314</span></div>
-          </div>
-        </div>
-
       </div>
 
 
@@ -469,20 +382,18 @@
           <button class="btn trans">Subscribe</button>
         </form>
       </div>
-      <!-- chunk end mail -->
 
 
 
       <!-- =============================================== article-list-2 -->
       <div class="article-list">
-
         <div class="article-item trans">
-          <div class="article-item__img">
-            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
-          </div>
-          <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor
-              incididunt</a></h2>
+          <div class="article-item__box-img-link">
+            <div class="article-item__img">
+              <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
+            </div>
+            <h2 class="article-item__h2"><a class="article-item__link link_blue" href="#">Lorem ipsum dolor sit amett</a></h2>
+          </div>          
           <ul class="article-item__tag-list">
             <li>Analytics</li>
             <li>Design</li>
@@ -497,7 +408,7 @@
             <div class="article-item__btn-wrap">
               <a class="article-item__btn-more" href="./article.html">READ MORE</a>
             </div>
-            <div class="article-item__like article-item__like_active">
+            <div class="article-item__like like like_active">
               <svg>
                 <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#heart"></use>
               </svg>
@@ -505,12 +416,12 @@
           </div>
         </div>
         <div class="article-item trans">
-          <div class="article-item__img">
-            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
-          </div>
-          <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor
-              incididunt</a></h2>
+          <div class="article-item__box-img-link">
+            <div class="article-item__img">
+              <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
+            </div>
+            <h2 class="article-item__h2"><a class="article-item__link link_blue" href="#">Lorem ipsum dolor sit amett</a></h2>
+          </div>          
           <ul class="article-item__tag-list">
             <li>Analytics</li>
             <li>Design</li>
@@ -524,9 +435,8 @@
           <div class="article-item__bootom">
             <div class="article-item__btn-wrap">
               <a class="article-item__btn-more" href="./article.html">READ MORE</a>
-              <a class="article-item__btn-free" href="./article.html">GET YOUR FREE</a>
             </div>
-            <div class="article-item__like">
+            <div class="article-item__like like like_active">
               <svg>
                 <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#heart"></use>
               </svg>
@@ -534,12 +444,12 @@
           </div>
         </div>
         <div class="article-item trans">
-          <div class="article-item__img">
-            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
-          </div>
-          <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor
-              incididunt</a></h2>
+          <div class="article-item__box-img-link">
+            <div class="article-item__img">
+              <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
+            </div>
+            <h2 class="article-item__h2"><a class="article-item__link link_blue" href="#">Lorem ipsum dolor sit amett</a></h2>
+          </div>          
           <ul class="article-item__tag-list">
             <li>Analytics</li>
             <li>Design</li>
@@ -553,9 +463,8 @@
           <div class="article-item__bootom">
             <div class="article-item__btn-wrap">
               <a class="article-item__btn-more" href="./article.html">READ MORE</a>
-              <a class="article-item__btn-free" href="./article.html">GET YOUR FREE</a>
             </div>
-            <div class="article-item__like">
+            <div class="article-item__like like like_active">
               <svg>
                 <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#heart"></use>
               </svg>
@@ -563,12 +472,12 @@
           </div>
         </div>
         <div class="article-item trans">
-          <div class="article-item__img">
-            <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
-          </div>
-          <h2 class="article-item__h2"><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor
-              incididunt</a></h2>
+          <div class="article-item__box-img-link">
+            <div class="article-item__img">
+              <img src="./assets/template/img/articles/dudget-hosting.jpg" alt="">
+            </div>
+            <h2 class="article-item__h2"><a class="article-item__link link_blue" href="#">Lorem ipsum dolor sit amett</a></h2>
+          </div>          
           <ul class="article-item__tag-list">
             <li>Analytics</li>
             <li>Design</li>
@@ -582,9 +491,8 @@
           <div class="article-item__bootom">
             <div class="article-item__btn-wrap">
               <a class="article-item__btn-more" href="./article.html">READ MORE</a>
-              <a class="article-item__btn-free" href="./article.html">GET YOUR FREE</a>
             </div>
-            <div class="article-item__like article-item__like_active">
+            <div class="article-item__like like like_active">
               <svg>
                 <use xlink:href="./assets/template/img/icons/svg/symbol/sprite.svg#heart"></use>
               </svg>
@@ -603,16 +511,19 @@
         <span>Load More</span>
       </button>
 
+      <button class="alm-load-more-btn">
+        Load More
+      </button>
 
 
       <!-- =============================================== logos -->
-      <section class="logos">
+      <div class="logos">
         <div class="container-long">
           <div class="logos__list">
             <div class="logos__list-items"></div>
           </div>
         </div>
-      </section><!--/logos-->
+      </div><!--/logos-->
 
 
 
@@ -635,6 +546,7 @@
 
 
   <!-- =============================================== script -->
+  <script src="https://yastatic.net/share2/share.js" async></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
   <script src="./assets/template/js/scripts.min.js"></script>
 

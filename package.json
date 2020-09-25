@@ -4,7 +4,10 @@
   "description": "Start template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "start-build": "gulp build",
+    "svg": "gulp svg",
+    "svg-color": "gulp svg-color"
   },
   "author": "AlexKa",
   "license": "ISC",
