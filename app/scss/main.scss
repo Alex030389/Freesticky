@@ -69,21 +69,21 @@ h3 {
 
 button {
   background-color: transparent;
-  border: none !important;
+  border: none;
 }
 
-button:active,
-button:focus,
-input:active,
-input:focus {
-  outline: none !important;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
+// button:active,
+// button:focus,
+// input:active,
+// input:focus {
+//   outline: none !important;
+//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+// }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0 !important;
-}
+// button::-moz-focus-inner,
+// input::-moz-focus-inner {
+//   border: 0 !important;
+// }
 
 .trans,
 .trans *,
@@ -178,7 +178,7 @@ input::-moz-focus-inner {
   }
 }
 
-.form {
+.form-m {
   position: relative;
 
   width: 700px;
@@ -626,7 +626,21 @@ input::-moz-focus-inner {
   }
 }
 
+// ===================================================== list
+.list {
 
+  li {
+    margin-bottom: 12px;
+  }
+
+  &_pl_sm {
+    padding-left: 10px;
+  }
+
+  &_pb_md {
+    padding-bottom: 15px;
+  }
+}
 
 
 // ====================================================== article-list
@@ -982,7 +996,7 @@ input::-moz-focus-inner {
   &_top {
     position: absolute;
     top: 40px;
-    right: 0;
+    left: 92%;
     flex-direction: column;
   }
 
@@ -1021,6 +1035,49 @@ input::-moz-focus-inner {
 }
 
 
+.page-article__title-box {
+  position: relative;
+  padding: 0 0 16px;
+  margin-bottom: 16px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 1px;
+    background-color: $c-main;
+  }
+
+  h1 {
+
+  }
+
+  p {
+    font-size: 24px;
+    margin-bottom: 0;
+    color: $c-secondary;
+  }
+}
+
+.page-article__date {
+  font-style: italic;
+  color: $c-secondary;
+}
+
+.page-article__author {
+  padding-top: 15px;
+  font-style: italic;
+  color: $c-secondary;
+  border-top: 1px solid $c-main;
+  margin-bottom: 0;
+
+  @media (max-width: $sm) {
+    margin-bottom: 10px;
+  }
+}
+
 
 // ====================================================== page-about
 .about {
@@ -1032,9 +1089,9 @@ input::-moz-focus-inner {
 }
 
 .about h1 {
+
   @media (max-width: $sm) {
     font-size: 32px;
-    margin-bottom: 0;
   }
 }
 
@@ -1044,6 +1101,11 @@ input::-moz-focus-inner {
   @media (max-width: $sm) {
     margin-bottom: 20px;
   }
+}
+
+.about__content {
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 
@@ -1098,97 +1160,176 @@ input::-moz-focus-inner {
 }
 
 
-
-
-
-
-
-
-
 // /////////////////////////////////////////////////// contact
-.contact {
+.wpcf7-form {
+  width: 100%;
+  padding-top: 16px;
+  max-width: 750px;
+  margin: 0 auto;
+}
 
-  ul {
-    margin-bottom: 25px;
+.form__row {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__col {
+  padding: 0 15px 20px;
+  width: 100%;
+
+  &_2 {
+    width: calc(100% / 2);
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
   }
 }
 
-.contacts-form {
-  background-color: #f4f4f5;
-  padding: 30px;
-  width: 100%; 
+.form__col_btn {
+  padding-top: 28px;
 
   @media (max-width: $sm) {
-    background-color: #f4f4f5;
-    padding: 30px 15px;
+    padding-top: 14px;
   }
 }
 
-.box-input-textarea {
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 4px;
+}
+
+.form-control {
+  padding: 11px 10px 9px;
+  border: solid 1px #a9bcc3;
+  display: block;
+  width: 100%;
+}
+
+.form-btn {
+  width: 100%;
+  background-color: $cherry-red;
+  color: #fff;
+  vertical-align: middle;
+  transition: .3s;
+  padding: 11px 10px 9px;
+  max-width: 230px;
+  
+  &:hover {
+    background-color: $c-secondary;
+  }
+
+  @media (max-width: $sm) {
+    max-width: 100%;
+  }
+}
+
+// .wpcf7-not-valid {
+//   border-color: rgb(238, 58, 58);
+// }
+
+.wpcf7-not-valid-tip {
+  padding-top: 4px;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  margin: 1em 0 1em;
+}
+
+
+// ====================================================== wp-content 
+.wp-content {
+  a {
+    @extend .link_blue;
+  }
+
+  ul {
+    @extend .list;
+    @extend .list_pl_sm;
+  }
+}
+
+
+// ===================================================== art-2
+.art {
+  margin-bottom: 40px;
+}
+
+.art__title {
+  font-size: 26px;
+
+  @media (max-width: $sm) {
+    font-size: 22px;
+  }
+}
+
+.art__date {
+  font-style: italic;
+}
+
+.art__list {
+  display: flex; 
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.art__item {
+  width: 25%;
+  padding: 0 15px;
+  
+  @media (max-width: $xl) {
+    width: 33.3333333%;    
+  }
+
+  @media (max-width: $sm) {
+    width: 50%;
+  }
+
+  @media (max-width: 370px) {
+    width: 100%;
+  }
+}
+
+// ====================================================== art-2
+.art-2 {
+
+}
+
+.art-2__list {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
 }
 
-.box-input {
-  display: flex;
-  flex-direction: column;
-  margin: 0 15px;
-  flex-grow: 1;
+.art-2__item {
+  padding: 0 15px;
+  width: 50%;
   margin-bottom: 20px;
-  flex-basis: 280px;
-}
 
-.contacts-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contacts-form__input,
-.contacts-form__textarea {
-  margin-bottom: 20px;
-  padding: 9px 15px 5px;
-  border: solid 1px #a9bcc3;
-  outline: none;
-
-  &:focus {
-    border: 1px solid #0099ff;
-  }
-
-  &.error {
-    border: solid 1px red;
-
+  @media (max-width: $sm) {
+    width: 100%;
   }
 }
 
-.contacts-form__input:last-child {
+.art-2__date {
+  margin-bottom: 0;
+  font-style: italic;
+  color: $c-secondary;
+}
+
+.art-2__title {
+  font-size: 20px;
   margin-bottom: 0;
 }
 
-.contacts-form__textarea {
-  margin: 0 15px 20px;
-  flex-grow: 1;
-  flex-basis: 280px;
-  min-height: 100px;
+.art-2__subtitle {
+  margin-bottom: 0;
 }
-
-.contacts-form__btn {
-  padding: 10px 20px 7px;
-  background-color: $cherry-red;
-  color: #fff;
-  max-width: 150px;
-  margin: 10px auto 0;
-  
-  &:hover {
-    background-color: $c-secondary;
-  }
-}
-
-
-
-
-
-
 
 // ====================================================== cartoons
 .cartoons {
@@ -1284,91 +1425,35 @@ input::-moz-focus-inner {
 
 
 
-// ============================================= article-index
-.index-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;
-}
-
-.index-item {
-  width: calc(100% / 2 - 30px);
-  min-width: 400px;
-  margin: 15px 15px 30px;
-  display: flex;
-  flex-direction: column;
-
-  &_wide {
-    width: 100%;
-  }
-
-  @media (max-width: $lg) {
-    width: 100%;
-    min-width: 100%;
-  }
-
-  @media (max-width: $sm) {
-    margin: 15px;
-  }
-}
-
-.index-item__date {
-  color: $c-main;
-}
-
-.index-item__title,
-.index-item__link {
-  font-size: 24px;
-  color: $azure;
-  margin-bottom: 8px;
-}
-
-.index-tem__link:hover {
-  color: $azure
-}
-
-.index-item__text {
-  color: $c-secondary;
-}
-
-.index-item-wrap-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.index-item__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;
-  width: 100%;
-}
-
-.index-item__list-item {
-  width: 204px;
-  margin: 0 15px;
-}
-
-.index-item__list-item a {
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-
-
-
 
 
 
 
 
 // btn-article
+.btn-article-back-wrap {
+  max-width: 750px;
+  margin: -20px auto 15px;
+
+  @media (max-width: $sm) {
+    margin-top: 0;
+  }
+
+  &_pt_sm {
+    padding-top: 10px;
+
+    @media (max-width: $sm) {
+      padding-top: 0;
+    }
+  }
+}
+
 .btn-article-back {
   position: relative;
   padding-left: 30px;
-  margin-bottom: 20px;
   color: $azure;
+  display: block;
+  width: 100px;
   
   &:hover {
     color: $azure;
