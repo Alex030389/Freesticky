@@ -659,6 +659,9 @@ button {
   min-width: 400px;
   max-width: 547px;
   margin: 0 15px 40px;
+  display: flex;
+  flex-direction: column;
+  
 
   @media (max-width: $sm) {
     min-width: 200px;
@@ -723,6 +726,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 
   @media (max-width: $sm) {
     // align-items: flex-start;
@@ -1270,6 +1274,7 @@ button {
 
 .art__date {
   font-style: italic;
+  color: #9b9b9b;
 }
 
 .art__list {
@@ -1281,16 +1286,17 @@ button {
 .art__item {
   width: 25%;
   padding: 0 15px;
+  font-size: 20px;
   
-  @media (max-width: $xl) {
+  @media (max-width: $sl) {
     width: 33.3333333%;    
   }
 
-  @media (max-width: $sm) {
+  @media (max-width: $xl) {
     width: 50%;
   }
 
-  @media (max-width: 370px) {
+  @media (max-width: $xsm) {
     width: 100%;
   }
 }
@@ -1319,7 +1325,7 @@ button {
 .art-2__date {
   margin-bottom: 0;
   font-style: italic;
-  color: $c-secondary;
+  color: #9b9b9b;
 }
 
 .art-2__title {
@@ -1331,24 +1337,29 @@ button {
   margin-bottom: 0;
 }
 
-// ====================================================== cartoons
-.cartoons {
+// ====================================================== free content
+.free-cont {
+}
+
+.free-cont__list {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
+  width: 100%;
+
+  &_pt_md {
+    padding-top: 20px;
+  }
 }
 
-.cartoons-item {
+.free-cont__item {
   padding: 0 15px 30px;
-  width: calc(100% / 2 - 30px);
-  min-width: 400px;
+  width: 50%;
 
-  @media (max-width: $md) {
-    min-width: 280px;
-    padding-bottom: 20px;
+  &_w-100 {
     width: 100%;
   }
-  
+
   h2 {
     font-size: 28px;
     font-weight: normal;
@@ -1358,77 +1369,32 @@ button {
   ul {
     
     li {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       
       span {
         color: $c-secondary;
       }
     }
   }
-}
 
-.cartoons-item_width-100 {
-  width: 100%;
-}
-
-
-
-
-
-
-
-
-// ====================================================== StickyCOLD
-.content-sticky-gold {
-
-  .link_blue {
-    display: inline-block;
+  a {
+    @extend .link_blue;
   }
 
-  h2 {
-    font-size: 32px;
-  }
-
-  h3 {
-    font-size: 20px;
-    color: $c-secondary;
-  }
-
-  .form-box {
-    padding: 20px;
-    background-color: rgba(207, 217, 221, 0.5);
-    margin-bottom: 15px;
-  }
-
-  .form-title {
-    font-size: 20px;
-    color: $c-secondary;
-  }
-
-  .daily-h {
-    position: relative;
-
-    span {
-      position: absolute;
-      top: -10px;
-      font-size: 60px;
-    }
+  @media (max-width: $md) {
+    width: 100%;
+    padding-bottom: 20px;
   }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// ////////////////////////////
+.table-this-day {
+  td:first-child {
+    padding-right: 20px;
+    vertical-align: top;
+  }
+}
 
 // btn-article
 .btn-article-back-wrap {
@@ -1486,14 +1452,6 @@ button {
     margin-top: 10px;
   }
 }
-
-
-
-
-
-
-
-
 
 
 // ====================================================== footer
